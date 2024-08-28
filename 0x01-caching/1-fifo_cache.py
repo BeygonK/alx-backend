@@ -4,6 +4,7 @@ from base_caching import BaseCaching
 
 
 class FIFOCache(BaseCaching):
+    """This is a class that inherits from parent"""
     def __init__(self):
         """Initialize the class with the parent's init method."""
         super().__init__()
