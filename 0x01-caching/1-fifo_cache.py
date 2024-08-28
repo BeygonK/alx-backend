@@ -17,7 +17,6 @@ class FIFOCache(BaseCaching):
 
         if key in self.cache_data:
             self.queue.remove(key)
-        
         self.cache_data[key] = item
         self.queue.append(key)
 
