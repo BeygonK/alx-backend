@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""class LRU"""
+"""class LRU that implements the LRU"""
 from base_caching import BaseCaching
 
 
