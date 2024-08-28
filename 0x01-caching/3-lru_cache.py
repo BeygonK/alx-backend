@@ -17,7 +17,6 @@ class LRUCache(BaseCaching):
 
         if key in self.cache_data:
             self.usage_order.remove(key)
-        
         self.cache_data[key] = item
         self.usage_order.append(key)
 
