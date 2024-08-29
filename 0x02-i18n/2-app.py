@@ -15,7 +15,7 @@ app = Flask(__name__)
 app.config.from_object(Config)
 babel = Babel(app)
 
-
+@babel.localeselector
 def get_locale():
     """Return locale based on user preference"""
     return request.accept_languages.best_match(app.config['LANGUAGES'])
