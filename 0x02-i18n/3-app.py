@@ -16,7 +16,6 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
-@babel.localeselector
 def get_locale():
     """Return locale based on user preference"""
     return request.accept_languages.best_match(app.config['LANGUAGES'])
@@ -25,4 +24,6 @@ def get_locale():
 @app.route('/')
 def home():
     """Home page"""
-    return render_template('2-index.html')
+    return render_template('3-index.html',
+                           home_title=_("home_title"),
+                           home_header=_("home_header"))
